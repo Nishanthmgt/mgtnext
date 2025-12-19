@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light & Optical Sensors | MGTnext</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* NAV */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-weight: 700; font-size: 22px; }
+.logo span { color: #2563eb; }
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+nav a:hover { color: #2563eb; }
+
+/* PAGE */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+h1 { font-size: 38px; }
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* SENSOR BLOCK */
+.sensor {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.sensor h2 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.sensor p { margin-bottom: 10px; }
+
+.sensor ul { padding-left: 18px; }
+
+footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MGT<span>next</span></div>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../sensors.html">Sensors</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Light & Optical Sensors</h1>
+  <p class="subtitle">
+    Light and optical sensors detect light intensity, color, flame,
+    and infrared signals. They are widely used in automation and IoT projects.
+  </p>
+
+  <!-- LDR -->
+  <div class="sensor">
+    <h2>LDR (Light Dependent Resistor)</h2>
+    <p><strong>What it is:</strong> A resistor whose resistance changes with light intensity.</p>
+    <p><strong>Working:</strong> Higher light → lower resistance; Arduino reads it as analog value.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Automatic street lights</li>
+      <li>Smart night lamps</li>
+      <li>Light intensity monitoring</li>
+    </ul>
+  </div>
+
+  <!-- IR RECEIVER -->
+  <div class="sensor">
+    <h2>IR Receiver</h2>
+    <p><strong>What it is:</strong> Receives infrared signals from remote controls.</p>
+    <p><strong>Working:</strong> Detects modulated IR signals and outputs digital data.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>IR remote control projects</li>
+      <li>Wireless control systems</li>
+    </ul>
+  </div>
+
+  <!-- IR PROXIMITY -->
+  <div class="sensor">
+    <h2>IR Proximity Sensor</h2>
+    <p><strong>What it is:</strong> Detects nearby objects using infrared reflection.</p>
+    <p><strong>Working:</strong> IR light reflects from object and triggers output.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Object detection</li>
+      <li>Robotics applications</li>
+    </ul>
+  </div>
+
+  <!-- FLAME -->
+  <div class="sensor">
+    <h2>Flame Sensor</h2>
+    <p><strong>What it is:</strong> Detects infrared light emitted by fire flames.</p>
+    <p><strong>Working:</strong> Flame IR radiation activates the sensor.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Fire detection systems</li>
+      <li>Safety alarm projects</li>
+    </ul>
+  </div>
+
+  <!-- COLOR -->
+  <div class="sensor">
+    <h2>Color Sensor (TCS3200)</h2>
+    <p><strong>What it is:</strong> Detects RGB color values of objects.</p>
+    <p><strong>Working:</strong> Converts color light into frequency output.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Color sorting systems</li>
+      <li>Industrial automation demos</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 MGTnext — Next-Generation Technology
+</footer>
+
+</body>
+</html>

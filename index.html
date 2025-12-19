@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MGTnext | IoT & Smart Engineering</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:#ffffff;
+  color:#0f172a;
+  line-height:1.6;
+  transition:0.3s;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.85);
+  border-bottom:1px solid #e5e7eb;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 80px;
+}
+.logo{font-size:22px;font-weight:700}
+.logo span{color:#2563eb}
+nav a{
+  margin-left:24px;
+  text-decoration:none;
+  color:#475569;
+  font-weight:500;
+}
+nav a:hover{color:#2563eb}
+#themeToggle{
+  margin-left:20px;
+  background:none;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* ===== HERO ===== */
+.hero{
+  padding:140px 80px 120px;
+  max-width:1200px;
+  margin:auto;
+  background:radial-gradient(circle at top left,#e0e7ff,transparent 40%),
+             radial-gradient(circle at bottom right,#f0f9ff,transparent 40%);
+}
+.hero h1{
+  font-size:56px;
+  line-height:1.2;
+  max-width:800px;
+}
+.hero span{color:#2563eb}
+.hero p{
+  margin-top:20px;
+  font-size:18px;
+  color:#475569;
+  max-width:620px;
+}
+.hero-buttons{margin-top:40px}
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  margin-right:14px;
+}
+.btn-primary{background:#2563eb;color:white}
+.btn-secondary{border:2px solid #2563eb;color:#2563eb}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:90px 80px;
+  max-width:1200px;
+  margin:auto;
+}
+section h2{font-size:36px;margin-bottom:12px}
+.section-desc{color:#475569;max-width:720px}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  margin-top:40px;
+}
+
+/* ===== CARDS ===== */
+.card{
+  padding:34px;
+  border-radius:18px;
+  border:1px solid #e5e7eb;
+  background:white;
+}
+.card i{
+  font-size:28px;
+  color:#2563eb;
+  margin-bottom:14px;
+}
+.card h3{margin-bottom:10px}
+.card p{color:#475569;font-size:15px}
+.card ul{
+  margin-top:10px;
+  padding-left:18px;
+  color:#475569;
+  font-size:14px;
+}
+
+/* ===== LEARNING PATH ===== */
+.levels{
+  background:linear-gradient(135deg,#020617,#0f172a);
+  color:white;
+  border-radius:28px;
+}
+.level{
+  background:#020617;
+  padding:38px;
+  border-radius:18px;
+}
+.level p{color:#cbd5f5;margin-top:8px}
+.level ul{
+  margin-top:12px;
+  padding-left:18px;
+  color:#cbd5f5;
+  font-size:14px;
+}
+
+/* ===== WHY ===== */
+.why ul{list-style:none;margin-top:30px}
+.why li{margin-bottom:14px}
+.why li::before{content:"✔ ";color:#2563eb}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#020617;
+  color:#cbd5f5;
+  padding:50px 20px;
+  text-align:center;
+}
+.social a{
+  color:#60a5fa;
+  margin:0 12px;
+  font-size:22px;
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== TYPING ===== */
+#typing::after{
+  content:"|";
+  margin-left:6px;
+  animation:blink 1s infinite;
+}
+@keyframes blink{50%{opacity:0}}
+
+/* ===== DARK MODE ===== */
+.dark{background:#020617;color:#e5e7eb}
+.dark header{background:rgba(2,6,23,0.9)}
+.dark .card{background:#020617;border-color:#1e293b}
+.dark section{color:#e5e7eb}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  header,section,.hero{padding:40px 20px}
+  .grid{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MGT<span>next</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="beginners.html">Beginners</a>
+    <a href="sensors.html">Sensors</a>
+    <a href="#contact">Contact</a>
+    <button id="themeToggle">🌙</button>
+  </nav>
+</header>
+
+<div class="hero reveal">
+  <h1>Building the Future of <span id="typing"></span></h1>
+  <p>
+    From blinking LED to industry-grade IoT systems.
+    Learn step-by-step without confusion.
+  </p>
+  <div class="hero-buttons">
+    <a href="projects.html" class="btn btn-primary">View Projects</a>
+    <a href="beginners.html" class="btn btn-secondary">Beginner Roadmap</a>
+  </div>
+</div>
+
+<!-- WHAT YOU WILL LEARN -->
+<section class="reveal">
+  <h2>What You Will Learn</h2>
+  <p class="section-desc">
+    A complete learning journey that starts from basics and ends with real-world IoT systems.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <i class="fa-solid fa-microchip"></i>
+      <h3>IoT System Design</h3>
+      <p>Understand how complete IoT systems are built.</p>
+      <ul>
+        <li>Sensors & actuators</li>
+        <li>Microcontrollers</li>
+        <li>Communication protocols</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-gears"></i>
+      <h3>Embedded Development</h3>
+      <p>Learn low-level control and programming.</p>
+      <ul>
+        <li>ESP32 & Arduino</li>
+        <li>Pin configuration</li>
+        <li>Real hardware logic</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-cloud"></i>
+      <h3>Cloud & Automation</h3>
+      <p>Connect devices to the internet.</p>
+      <ul>
+        <li>IoT dashboards</li>
+        <li>Data monitoring</li>
+        <li>Remote control</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNING PATH -->
+<section class="levels reveal">
+  <h2>IoT Learning Path</h2>
+
+  <div class="grid">
+    <div class="level">
+      <h3>Beginner Level</h3>
+      <p>Start from zero knowledge.</p>
+      <ul>
+        <li>LED, buzzer, sensors</li>
+        <li>Basic Arduino & ESP32</li>
+        <li>100+ simple projects</li>
+      </ul>
+    </div>
+
+    <div class="level">
+      <h3>Intermediate Level</h3>
+      <p>Build real-world applications.</p>
+      <ul>
+        <li>Smart home systems</li>
+        <li>Web & app control</li>
+        <li>IoT dashboards</li>
+      </ul>
+    </div>
+
+    <div class="level">
+      <h3>Advanced Level</h3>
+      <p>Industry-grade IoT & AI systems.</p>
+      <ul>
+        <li>Automation</li>
+        <li>AI + IoT (AIoT)</li>
+        <li>Large-scale projects</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="why reveal">
+  <h2>Why MGTnext?</h2>
+  <ul>
+    <li>Clear pin-level explanation</li>
+    <li>Beginner-focused learning</li>
+    <li>Practical real-world approach</li>
+    <li>No copy-paste concepts</li>
+    <li>Built by an engineering student for students</li>
+  </ul>
+</section>
+
+<footer id="contact">
+  <p>Connect with us</p>
+  <div class="social">
+    <a href="https://youtube.com/@circuit_vibe"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/circuitvibetech"><i class="fab fa-instagram"></i></a>
+    <a href="https://whatsapp.com/channel/0029VbBJS6EJUM2W5xihlu20"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.linkedin.com/in/m-nishanth-1193a332a"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <p style="margin-top:15px">Email: circuitvibe0311@gmail.com</p>
+  <p style="margin-top:10px">© 2025 MGTnext</p>
+</footer>
+
+<script>
+/* Typing */
+const words=["IoT Systems","Embedded Engineering","ESP32 Projects","Smart Automation"];
+let i=0,j=0,del=false;
+const t=document.getElementById("typing");
+function type(){
+  t.textContent=words[i].substring(0,j);
+  if(!del && j++===words[i].length+1) del=true;
+  if(del && j--===0){del=false;i=(i+1)%words.length;}
+  setTimeout(type,del?60:120);
+}
+type();
+
+/* Reveal */
+const r=document.querySelectorAll(".reveal");
+window.addEventListener("scroll",()=>r.forEach(e=>{
+  if(e.getBoundingClientRect().top<window.innerHeight-100)e.classList.add("active");
+}));
+
+/* Dark mode */
+document.getElementById("themeToggle").onclick=()=>{
+  document.body.classList.toggle("dark");
+};
+</script>
+
+</body>
+</html>
+

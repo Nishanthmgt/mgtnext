@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Energy Monitoring System | MGTnext</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+.logo span {
+  color: #2563eb;
+}
+
+nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #2563eb;
+}
+
+/* PAGE */
+.container {
+  max-width: 1050px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* TITLE */
+.project-title h1 {
+  font-size: 38px;
+}
+.project-title p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+/* ADVANCED BADGE */
+.level-badge {
+  display: inline-block;
+  margin-top: 10px;
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* SECTION */
+.section {
+  background: #ffffff;
+  padding: 34px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 34px;
+}
+
+.section h2 {
+  font-size: 23px;
+  margin-bottom: 16px;
+  color: #2563eb;
+}
+
+/* LISTS */
+ul, ol {
+  padding-left: 22px;
+}
+ul li, ol li {
+  margin-bottom: 8px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+}
+th {
+  background: #f1f5f9;
+}
+
+/* IMAGE */
+.project-image img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+/* CODE */
+.code-box {
+  background: #020617;
+  color: #e5e7eb;
+  border-radius: 16px;
+  padding: 22px;
+  overflow-x: auto;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+}
+
+.copy-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 12px;
+}
+
+.copy-btn:hover {
+  opacity: 0.9;
+}
+
+/* BACK */
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 26px;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MGT<span>next</span></div>
+  <nav>
+    <a href="../../index.html">Home</a>
+    <a href="../../projects.html">Projects</a>
+    <a href="../../sensors.html">Sensors</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- TITLE -->
+  <div class="project-title">
+    <h1>Smart Energy Monitoring & Analytics</h1>
+    <p>Advanced Level | IoT + Cloud + Data Analytics</p>
+    <span class="level-badge">ADVANCED</span>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <h2>Project Overview</h2>
+    <p>
+      This project monitors real-time electrical energy consumption using IoT devices
+      and performs cloud-based analytics. It helps in identifying power usage patterns,
+      detecting anomalies, and optimizing energy efficiency.
+    </p>
+  </div>
+
+  <!-- COMPONENTS -->
+  <div class="section">
+    <h2>Components Required</h2>
+    <ul>
+      <li>ESP32 / ESP8266</li>
+      <li>Current Sensor (ACS712)</li>
+      <li>Voltage Sensor</li>
+      <li>Cloud Server (AWS / Firebase)</li>
+      <li>Power Supply</li>
+    </ul>
+  </div>
+
+  <!-- ARCHITECTURE -->
+  <div class="section project-image">
+    <h2>System Architecture</h2>
+    <img src="../../images/smart-energy-architecture.png" alt="Smart Energy Architecture">
+  </div>
+
+  <!-- DATA FLOW -->
+  <div class="section">
+    <h2>Data Flow</h2>
+    <ol>
+      <li>Sensors measure voltage and current</li>
+      <li>ESP32 calculates power and energy</li>
+      <li>Data sent securely to cloud</li>
+      <li>Analytics dashboard visualizes usage</li>
+    </ol>
+  </div>
+
+  <!-- WORKING -->
+  <div class="section">
+    <h2>Working Principle</h2>
+    <p>
+      Sensor data is sampled by the ESP32 and converted into power and energy units.
+      The processed data is transmitted to the cloud where analytics algorithms
+      identify consumption trends and abnormal usage.
+    </p>
+  </div>
+
+  <!-- SECURITY -->
+  <div class="section">
+    <h2>Security Considerations</h2>
+    <ul>
+      <li>Encrypted data transmission (HTTPS/MQTT TLS)</li>
+      <li>Authentication for cloud access</li>
+      <li>Secure device provisioning</li>
+    </ul>
+  </div>
+
+  <!-- SCALABILITY -->
+  <div class="section">
+    <h2>Scalability & Applications</h2>
+    <ul>
+      <li>Smart homes and buildings</li>
+      <li>Industrial energy management</li>
+      <li>Grid-level monitoring</li>
+      <li>AI-based energy prediction</li>
+    </ul>
+  </div>
+
+  <!-- CODE -->
+  <div class="section">
+    <h2>ESP32 Code (Sample)</h2>
+
+    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+    <div class="code-box">
+<pre id="codeBlock">
+// Pseudo code for energy monitoring
+
+current = readCurrentSensor();
+voltage = readVoltageSensor();
+
+power = voltage * current;
+energy += power * time;
+
+sendToCloud(energy);
+</pre>
+    </div>
+  </div>
+
+  <a class="back" href="../../projects.html">← Back to Projects</a>
+
+</div>
+
+<footer>
+  © 2025 MGTnext — Next-Generation Technology
+</footer>
+
+<script>
+function copyCode() {
+  const code = document.getElementById("codeBlock").innerText;
+  navigator.clipboard.writeText(code);
+  alert("Code copied successfully!");
+}
+</script>
+
+</body>
+</html>

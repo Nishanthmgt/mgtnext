@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sensors List | MGTnext</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* NAVBAR */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+.logo span { color: #2563eb; }
+
+nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+nav a:hover { color: #2563eb; }
+
+/* PAGE */
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #6b7280;
+  max-width: 700px;
+}
+
+/* SENSOR SECTION */
+.sensor-section {
+  margin-top: 50px;
+}
+
+.sensor-section h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  color: #2563eb;
+}
+
+.sensor-list {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.sensor-list ul {
+  columns: 2;
+  column-gap: 40px;
+  list-style: none;
+}
+
+.sensor-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 26px;
+  margin-top: 70px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .sensor-list ul {
+    columns: 1;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MGT<span>next</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="beginners.html">Beginners</a>
+    <a href="sensors.html">Sensors</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Sensor List for IoT & Embedded Projects</h1>
+  <p class="subtitle">
+    Commonly used sensors for beginner to advanced IoT and embedded system projects.
+    Choose sensors based on your project idea.
+  </p>
+
+  <section class="sensor-nav">
+  <a href="environment.html" class="sensor-btn">🌱 Environment</a>
+  <a href="gas.html" class="sensor-btn">🔥 Gas</a>
+  <a href="light.html" class="sensor-btn">💡 Light</a>
+  <a href="motion.html" class="sensor-btn">🏃 Motion</a>
+  <a href="water.html" class="sensor-btn">💧 Water</a>
+</section>
+
+
+  <!-- ENVIRONMENT -->
+  <div class="sensor-section">
+    <h2>Environmental Sensors</h2>
+    <div class="sensor-list">
+      <ul>
+        <li>DHT11 – Temperature & Humidity</li>
+        <li>DHT22 – Temperature & Humidity</li>
+        <li>LM35 – Temperature Sensor</li>
+        <li>DS18B20 – Digital Temperature</li>
+        <li>BMP180 / BMP280 – Pressure Sensor</li>
+        <li>BME280 – Temp, Humidity, Pressure</li>
+        <li>MQ2 – Gas Sensor</li>
+        <li>MQ7 – Carbon Monoxide</li>
+        <li>MQ135 – Air Quality</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MOTION -->
+  <div class="sensor-section">
+    <h2>Motion & Distance Sensors</h2>
+    <div class="sensor-list">
+      <ul>
+        <li>PIR Motion Sensor</li>
+        <li>Ultrasonic Sensor (HC-SR04)</li>
+        <li>IR Obstacle Sensor</li>
+        <li>IR Proximity Sensor</li>
+        <li>Microwave Radar Sensor</li>
+        <li>Vibration Sensor</li>
+        <li>Tilt Sensor</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LIGHT -->
+  <div class="sensor-section">
+    <h2>Light & Optical Sensors</h2>
+    <div class="sensor-list">
+      <ul>
+        <li>LDR – Light Dependent Resistor</li>
+        <li>Photodiode</li>
+        <li>Phototransistor</li>
+        <li>IR Receiver</li>
+        <li>Flame Sensor</li>
+        <li>Color Sensor (TCS3200)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TOUCH -->
+  <div class="sensor-section">
+    <h2>Touch & Input Sensors</h2>
+    <div class="sensor-list">
+      <ul>
+        <li>Capacitive Touch Sensor</li>
+        <li>Touch Switch Module</li>
+        <li>Keypad Module</li>
+        <li>Push Button</li>
+        <li>Rotary Encoder</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- WATER -->
+  <div class="sensor-section">
+    <h2>Water & Level Sensors</h2>
+    <div class="sensor-list">
+      <ul>
+        <li>Water Level Sensor</li>
+        <li>Rain Sensor</li>
+        <li>Soil Moisture Sensor</li>
+        <li>Flow Sensor</li>
+        <li>Float Switch</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BIOMETRIC -->
+  <div class="sensor-section">
+    <h2>Biometric & Health Sensors</h2>
+    <div class="sensor-list">
+      <ul>
+        <li>Fingerprint Sensor</li>
+        <li>Heart Rate Sensor</li>
+        <li>Pulse Sensor</li>
+        <li>SpO2 Sensor</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 MGTnext — Next-Generation Technology
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | MGTnext</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* NAVBAR */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+.logo span { color: #2563eb; }
+
+nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+nav a:hover { color: #2563eb; }
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.page-header h1 {
+  font-size: 42px;
+}
+.page-header p {
+  margin-top: 10px;
+  color: #6b7280;
+  max-width: 700px;
+}
+
+/* CONTROLS */
+.project-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.project-controls input {
+  flex: 1;
+  min-width: 260px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.filter-btn:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.filter-btn.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* PROJECT GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.level {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.beginner { background: #ecfeff; color: #0369a1; }
+.intermediate { background: #fef3c7; color: #92400e; }
+.advanced { background: #fee2e2; color: #991b1b; }
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2563eb;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 26px;
+  margin-top: 60px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MGT<span>next</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="sensors.html">Sensors</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="page-header">
+    <h1>IoT Projects (100+)</h1>
+    <p>
+      Explore beginner to advanced real-world IoT projects with components,
+      pin configuration, code, and working explanation.
+    </p>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="project-controls">
+    <input type="text" id="searchInput" placeholder="Search projects..." onkeyup="searchProjects()">
+
+    <div class="filter-group">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+      <button class="filter-btn" onclick="filterProjects('beginner', this)">Beginner</button>
+      <button class="filter-btn" onclick="filterProjects('intermediate', this)">Intermediate</button>
+      <button class="filter-btn" onclick="filterProjects('advanced', this)">Advanced</button>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="project-grid">
+
+    <!-- BEGINNER -->
+    <div class="project-card" data-level="beginner">
+      <span class="level beginner">Beginner</span>
+      <h3>LED Blink using Arduino</h3>
+      <p>Learn GPIO control and basic digital output.</p>
+      <a href="projects/beginners/led-blink.html">View Project →</a>
+    </div>
+
+    <div class="project-card" data-level="beginner">
+      <span class="level beginner">Beginner</span>
+      <h3>Temperature Monitor (LM35)</h3>
+      <p>Read analog sensor values and display temperature.</p>
+      <a href="projects/beginners/temp-lm35.html">View Project →</a>
+    </div>
+
+    <!-- INTERMEDIATE -->
+    <div class="project-card" data-level="intermediate">
+      <span class="level intermediate">Intermediate</span>
+      <h3>Smart Home using ESP32</h3>
+      <p>Control appliances via WiFi using ESP32.</p>
+      <a href="projects/intermediate/smart-home.html">View Project →</a>
+    </div>
+
+    <div class="project-card" data-level="intermediate">
+      <span class="level intermediate">Intermediate</span>
+      <h3>Weather Station</h3>
+      <p>Monitor temperature, humidity, and pressure.</p>
+      <a href="projects/intermediate/weather-station.html">View Project →</a>
+    </div>
+
+    <!-- ADVANCED -->
+    <div class="project-card" data-level="advanced">
+      <span class="level advanced">Advanced</span>
+      <h3>AI Surveillance System</h3>
+      <p>ESP32-CAM + AI based motion detection.</p>
+      <a href="projects/advanced/ai-surveillance.html">View Project →</a>
+    </div>
+
+    <div class="project-card" data-level="advanced">
+      <span class="level advanced">Advanced</span>
+      <h3>Smart Grid Monitoring</h3>
+      <p>Power monitoring and analytics using IoT.</p>
+      <a href="projects/advanced/smart-grid.html">View Project →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 MGTnext — Next-Generation Technology
+</footer>
+
+<script>
+function filterProjects(level, btn) {
+  let cards = document.querySelectorAll(".project-card");
+  let buttons = document.querySelectorAll(".filter-btn");
+
+  buttons.forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+
+  cards.forEach(card => {
+    let projectLevel = card.getAttribute("data-level");
+    card.style.display =
+      level === "all" || projectLevel === level ? "block" : "none";
+  });
+}
+
+function searchProjects() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.querySelectorAll(".project-card");
+
+  cards.forEach(card => {
+    let text = card.innerText.toLowerCase();
+    card.style.display = text.includes(input) ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>

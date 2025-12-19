@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion & Distance Sensors | MGTnext</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* NAV */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-weight: 700; font-size: 22px; }
+.logo span { color: #2563eb; }
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+nav a:hover { color: #2563eb; }
+
+/* PAGE */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+h1 { font-size: 38px; }
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* SENSOR BLOCK */
+.sensor {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.sensor h2 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.sensor p { margin-bottom: 10px; }
+
+.sensor ul { padding-left: 18px; }
+
+footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MGT<span>next</span></div>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../sensors.html">Sensors</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Motion & Distance Sensors</h1>
+  <p class="subtitle">
+    Motion and distance sensors are used to detect movement, presence,
+    and object distance in IoT and embedded projects.
+  </p>
+
+  <!-- PIR -->
+  <div class="sensor">
+    <h2>PIR Motion Sensor</h2>
+    <p><strong>What it is:</strong> Detects human motion using infrared radiation.</p>
+    <p><strong>Working:</strong> Senses change in IR levels when a person moves.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Motion-based lights</li>
+      <li>Intruder alarm systems</li>
+      <li>Smart room automation</li>
+    </ul>
+  </div>
+
+  <!-- ULTRASONIC -->
+  <div class="sensor">
+    <h2>Ultrasonic Sensor (HC-SR04)</h2>
+    <p><strong>What it is:</strong> Measures distance using ultrasonic sound waves.</p>
+    <p><strong>Working:</strong> Sends ultrasonic pulse and calculates echo time.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Obstacle detection</li>
+      <li>Smart parking systems</li>
+      <li>Distance measurement projects</li>
+    </ul>
+  </div>
+
+  <!-- IR OBSTACLE -->
+  <div class="sensor">
+    <h2>IR Obstacle Sensor</h2>
+    <p><strong>What it is:</strong> Detects nearby objects using infrared light.</p>
+    <p><strong>Working:</strong> IR light reflects from object and triggers output.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Line follower robots</li>
+      <li>Object detection</li>
+      <li>Basic robotics</li>
+    </ul>
+  </div>
+
+  <!-- VIBRATION -->
+  <div class="sensor">
+    <h2>Vibration Sensor</h2>
+    <p><strong>What it is:</strong> Detects vibrations or shocks.</p>
+    <p><strong>Working:</strong> Internal spring/contact triggers on vibration.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Earthquake alert demo</li>
+      <li>Machine vibration monitoring</li>
+    </ul>
+  </div>
+
+  <!-- TILT -->
+  <div class="sensor">
+    <h2>Tilt Sensor</h2>
+    <p><strong>What it is:</strong> Detects inclination or tilt.</p>
+    <p><strong>Working:</strong> Metal ball inside changes contact when tilted.</p>
+    <p><strong>Used in:</strong></p>
+    <ul>
+      <li>Tilt-based alerts</li>
+      <li>Orientation detection</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 MGTnext — Next-Generation Technology
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LED Blink using Arduino | MGTnext</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CODE BLOCK */
+.code-box {
+  background: #0f172a;
+  color: #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  overflow-x: auto;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+}
+
+.code-box .title {
+  color: #60a5fa;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.code-box pre {
+  white-space: pre;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+.logo span {
+  color: #2563eb;
+}
+
+nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #2563eb;
+}
+
+/* PAGE */
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* TITLE */
+.project-title {
+  margin-bottom: 30px;
+}
+.project-title h1 {
+  font-size: 36px;
+}
+.project-title p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+/* SECTION */
+.section {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #2563eb;
+}
+
+/* LIST */
+ul {
+  padding-left: 20px;
+}
+ul li {
+  margin-bottom: 8px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #f1f5f9;
+}
+
+/* BACK BUTTON */
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+    <script>
+function copyCode() {
+  const code = document.getElementById("codeBlock").innerText;
+  navigator.clipboard.writeText(code);
+  alert("Code copied successfully!");
+}
+</script>   
+
+
+<header>
+  <div class="logo">MGT<span>next</span></div>
+  <nav>
+    <a href="../../index.html">Home</a>
+    <a href="../../projects.html">Projects</a>
+    <a href="../../sensors.html">Sensors</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- TITLE -->
+  <div class="project-title">
+    <h1>LED Blink using Arduino</h1>
+    <p>Beginner Level | Digital Output Basics</p>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <h2>Project Overview</h2>
+    <p>
+      This project demonstrates how to control a digital output using Arduino.
+      An LED is turned ON and OFF at regular intervals, helping beginners
+      understand microcontroller pin control.
+    </p>
+  </div>
+
+  <!-- COMPONENTS -->
+  <div class="section">
+    <h2>Components Required</h2>
+    <ul>
+      <li>Arduino UNO</li>
+      <li>LED</li>
+      <li>220Ω Resistor</li>
+      <li>Breadboard</li>
+      <li>Jumper Wires</li>
+    </ul>
+  </div>
+
+  <!-- PIN CONFIG -->
+  <div class="section">
+    <h2>Pin Configuration</h2>
+    <table>
+      <tr>
+        <th>Component</th>
+        <th>Arduino Pin</th>
+      </tr>
+      <tr>
+        <td>LED Anode (+)</td>
+        <td>D13</td>
+      </tr>
+      <tr>
+        <td>LED Cathode (−)</td>
+        <td>GND</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section project-image">
+  <h2>Circuit Diagram</h2>
+  <img src="../../images/led-blink.png" alt="LED Blink Circuit Diagram">
+</div>
+
+  <!-- WORKING -->
+  <div class="section">
+    <h2>Working Principle</h2>
+    <p>
+      Arduino sends HIGH and LOW signals to digital pin D13.
+      When HIGH, the LED turns ON. When LOW, the LED turns OFF.
+      This process repeats continuously, creating a blinking effect.
+    </p>
+  </div>
+
+  
+  
+  <!-- CODE SECTION -->
+<div class="section">
+  <h2>Arduino Code</h2>
+
+  <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+  <div class="code-box">
+<pre id="codeBlock">
+int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH);
+  delay(1000);
+  digitalWrite(ledPin, LOW);
+  delay(1000);
+}
+</pre>
+  </div>
+</div>
+
+  <a class="back" href="../../projects.html">← Back to Projects</a>
+
+</div>
+
+
+
+<footer>
+  © 2025 MGTnext — Next-Generation Technology
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Environmental Sensors | MGTnext</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* PAGE SPECIFIC */
+.env-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.env-header h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.env-header p {
+  color: #6b7280;
+  max-width: 750px;
+}
+
+/* SENSOR CARDS */
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.sensor-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.25s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.sensor-card h3 {
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.sensor-card ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.sensor-card li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.use-case {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* BACK LINK */
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2563eb;
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">MGT<span>next</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="sensors.html">Sensors</a>
+  </nav>
+</header>
+
+<div class="env-container">
+
+  <div class="env-header">
+    <h1>Environmental Sensors</h1>
+    <p>
+      Environmental sensors are used to measure temperature, humidity, pressure,
+      and air quality. These sensors are widely used in IoT, smart cities,
+      weather monitoring, and automation projects.
+    </p>
+  </div>
+
+  <div class="sensor-grid">
+
+    <!-- DHT11 -->
+    <div class="sensor-card">
+      <h3>DHT11</h3>
+      <p>Temperature & Humidity Sensor</p>
+      <ul>
+        <li>Digital output</li>
+        <li>Low cost</li>
+        <li>Beginner friendly</li>
+      </ul>
+      <div class="use-case">
+        Used in basic weather stations, room monitoring, and IoT learning projects.
+      </div>
+    </div>
+
+    <!-- DHT22 -->
+    <div class="sensor-card">
+      <h3>DHT22</h3>
+      <p>High Accuracy Temp & Humidity Sensor</p>
+      <ul>
+        <li>Higher accuracy than DHT11</li>
+        <li>Wider temperature range</li>
+      </ul>
+      <div class="use-case">
+        Used in smart agriculture and indoor climate monitoring.
+      </div>
+    </div>
+
+    <!-- LM35 -->
+    <div class="sensor-card">
+      <h3>LM35</h3>
+      <p>Analog Temperature Sensor</p>
+      <ul>
+        <li>Analog output</li>
+        <li>Easy calibration</li>
+      </ul>
+      <div class="use-case">
+        Used in industrial temperature measurement and embedded systems.
+      </div>
+    </div>
+
+    <!-- BMP280 -->
+    <div class="sensor-card">
+      <h3>BMP280</h3>
+      <p>Temperature & Pressure Sensor</p>
+      <ul>
+        <li>I2C / SPI communication</li>
+        <li>High precision</li>
+      </ul>
+      <div class="use-case">
+        Used in altitude measurement, drones, and weather monitoring.
+      </div>
+    </div>
+
+    <!-- MQ135 -->
+    <div class="sensor-card">
+      <h3>MQ135</h3>
+      <p>Air Quality Sensor</p>
+      <ul>
+        <li>Detects CO₂, NH₃, smoke</li>
+        <li>Analog output</li>
+      </ul>
+      <div class="use-case">
+        Used in pollution monitoring and smart city applications.
+      </div>
+    </div>
+
+    <!-- BME280 -->
+    <div class="sensor-card">
+      <h3>BME280</h3>
+      <p>Temp, Humidity & Pressure</p>
+      <ul>
+        <li>All-in-one sensor</li>
+        <li>I2C communication</li>
+      </ul>
+      <div class="use-case">
+        Used in advanced IoT and environmental analytics systems.
+      </div>
+    </div>
+
+  </div>
+
+  <a class="back-link" href="sensors.html">← Back to Sensors</a>
+
+</div>
+
+<footer>
+  © 2025 MGTnext — Next-Generation Technology
+</footer>
+
+</body>
+</html>
